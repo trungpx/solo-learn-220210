@@ -30,7 +30,7 @@ from timm.data import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD
 from timm.models.layers import DropPath, trunc_normal_
 from timm.models.layers.helpers import to_2tuple
 from timm.models.registry import register_model
-from timm.models.convnext import _create_convnext
+# from timm.models.convnext import _create_convnext
 from timm.models.swin_transformer import _create_swin_transformer
 from timm.models.vision_transformer import _create_vision_transformer
 
@@ -654,7 +654,7 @@ def poolformer_m48(**kwargs):
     model.default_cfg = default_cfgs["poolformer_m"]
     return model
 
-
+'''
 @register_model
 def convnext_tiny(**kwargs):
     model_args = dict(depths=(3, 3, 9, 3), dims=(96, 192, 384, 768), **kwargs)
@@ -681,3 +681,4 @@ def convnext_large(**kwargs):
     model_args = dict(depths=[3, 3, 27, 3], dims=[192, 384, 768, 1536], **kwargs)
     model = _create_convnext("convnext_large", pretrained=False, num_classes=0, **model_args)
     return model
+'''
